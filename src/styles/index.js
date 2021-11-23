@@ -88,3 +88,39 @@ export const FooterStyles = styled.footer`
     color: hsl(235, 21%, 11%);
   }
 `;
+
+
+export const ButtonCheck = styled.button`
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-radius: 100%;
+  border: 1px solid hsl(233, 14%, 35%);
+  cursor: pointer;
+  height: 20px;
+  margin: 0 1rem;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  transition: 0.3s;
+  width: 20px;
+  &:before {
+    content: url("../images/icon-check.svg");
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  &:hover,
+  &:hover:before{
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    opacity: 1;
+  }
+  &.active,
+  &.active:before{
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    opacity: 1;
+  }
+`;

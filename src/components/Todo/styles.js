@@ -9,21 +9,20 @@ export const Task = styled.li`
   list-style: none;
   margin: 0;
   padding: 15px;
+  cursor: grabbing;
   span {
     color: ${({ theme }) => theme.text};
-    cursor: pointer;
     margin: 0 20px;
     width: 80%;
-    &.complete {
+    &.completed {
       color: hsl(234, 11%, 52%);
       text-decoration: line-through;
       transition: all 0.2s linear;
     }
   }
-  button {
-    background: transparent;
-    outline: none;
+  .btnDelete{
     border: none;
-    cursor: pointer;
+    background-color: transparent;
+    cursor:pointer;
   }
 `;
